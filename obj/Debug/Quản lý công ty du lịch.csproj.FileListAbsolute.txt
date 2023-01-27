@@ -1,0 +1,16 @@
+F:\Visual Studio\Quản lý công ty du lịch\bin\Debug\Quản lý công ty du lịch.exe.config
+F:\Visual Studio\Quản lý công ty du lịch\bin\Debug\Quản lý công ty du lịch.exe
+F:\Visual Studio\Quản lý công ty du lịch\bin\Debug\Quản lý công ty du lịch.pdb
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.csproj.AssemblyReference.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.csproj.SuggestedBindingRedirects.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.Properties.Resources.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.csproj.GenerateResource.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.csproj.CoreCompileInputs.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.exe
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.pdb
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_login.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_customer.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_manager.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_infor.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_admin.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_book_ticket.resources
