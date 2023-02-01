@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DTO\Account.cs" />
-    <Compile Include="DTO\UpdateData.cs" />
     <Compile Include="f_book_ticket.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

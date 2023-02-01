@@ -46,5 +46,10 @@ namespace Quản_lý_công_ty_du_lịch
         {
 
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

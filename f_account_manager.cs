@@ -85,5 +85,10 @@ namespace Quản_lý_công_ty_du_lịch
             f.ShowDialog();
             this.Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
