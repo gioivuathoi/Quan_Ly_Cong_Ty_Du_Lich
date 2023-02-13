@@ -44,6 +44,7 @@
             this.listBox_paytype = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.TB_PAYTEXT = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.BUTTON_BOOK_TICKET = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.DTP_ngaydi = new System.Windows.Forms.DateTimePicker();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.TB_PAYTEXT = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DTGV_TOUR)).BeginInit();
             this.panel4.SuspendLayout();
@@ -198,11 +198,11 @@
             this.listBox_paytype.FormattingEnabled = true;
             this.listBox_paytype.ItemHeight = 20;
             this.listBox_paytype.Items.AddRange(new object[] {
-            "Thanh toán online bằng hình thức chuyển khoản",
-            "Thanh toan trực tiếp tại văn phòng công ty"});
-            this.listBox_paytype.Location = new System.Drawing.Point(212, 14);
+            "Online",
+            "Trực tiếp"});
+            this.listBox_paytype.Location = new System.Drawing.Point(240, 14);
             this.listBox_paytype.Name = "listBox_paytype";
-            this.listBox_paytype.Size = new System.Drawing.Size(191, 44);
+            this.listBox_paytype.Size = new System.Drawing.Size(163, 44);
             this.listBox_paytype.TabIndex = 1;
             this.listBox_paytype.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -224,6 +224,14 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(403, 90);
             this.panel11.TabIndex = 7;
+            // 
+            // TB_PAYTEXT
+            // 
+            this.TB_PAYTEXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_PAYTEXT.Location = new System.Drawing.Point(8, 47);
+            this.TB_PAYTEXT.Name = "TB_PAYTEXT";
+            this.TB_PAYTEXT.Size = new System.Drawing.Size(369, 27);
+            this.TB_PAYTEXT.TabIndex = 2;
             // 
             // label4
             // 
@@ -336,20 +344,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(14, 13);
+            this.label7.Location = new System.Drawing.Point(6, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 27);
             this.label7.TabIndex = 0;
             this.label7.Text = "Ngày đi: ";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // TB_PAYTEXT
-            // 
-            this.TB_PAYTEXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_PAYTEXT.Location = new System.Drawing.Point(8, 47);
-            this.TB_PAYTEXT.Name = "TB_PAYTEXT";
-            this.TB_PAYTEXT.Size = new System.Drawing.Size(369, 27);
-            this.TB_PAYTEXT.TabIndex = 2;
             // 
             // f_book_ticket
             // 
