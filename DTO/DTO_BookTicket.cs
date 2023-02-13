@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quản_lý_công_ty_du_lịch.DTO
 {
-    public class BookTicket
+    public class DTO_BookTicket
     {
         private string mave;
         private int so_nguoi_lon;
@@ -25,10 +25,10 @@ namespace Quản_lý_công_ty_du_lịch.DTO
         public string Payment { get => payment; set => payment = value; }
 
 
-        public BookTicket()
+        public DTO_BookTicket()
         { }
 
-        public BookTicket(string mave, int so_nguoi_lon, int so_tre_em, int gia_ve, DateTime ngay_di, DateTime ngay_dat, string payment)
+        public DTO_BookTicket(string mave, int so_nguoi_lon, int so_tre_em, int gia_ve, DateTime ngay_di, DateTime ngay_dat, string payment)
         {
             Mave = mave;
             So_nguoi_lon = so_nguoi_lon;

@@ -118,7 +118,7 @@ namespace Quản_lý_công_ty_du_lịch
         }
 
         //Đặt tour
-        public bool BookTicket(BookTicket tk)
+        public bool BookTicket(DTO_BookTicket tk)
         {
             try
             {
@@ -135,7 +135,7 @@ namespace Quản_lý_công_ty_du_lịch
         #region events
         private void button_load_tour_Click(object sender, EventArgs e)
         {
-            string id_tour = TB_ID_TOUR_SEARCH.Text;
+            string id_tour = TB_ID_TOUR_LOAD.ToString();
             LoadTour(id_tour);
         }
         //Đặt vé buttton
@@ -154,15 +154,15 @@ namespace Quản_lý_công_ty_du_lịch
                 //tạo DTO
 
                 int gia = int.Parse(numericUpDownOver16.Text) * int.Parse(DTGV_TOUR.Rows[1].Cells[2].ToString());
-                BookTicket tk = new BookTicket(taomavetudong().ToString(), int.Parse(numericUpDownOver16.Text), int.Parse(numericUpDownUnder16.Text), gia, DateTime.Parse(DTP_ngaydi.Text), DateTime.Now, listBox_paytype.Text);
+                DTO_BookTicket tk = new DTO_BookTicket(taomavetudong().ToString(), int.Parse(numericUpDownOver16.Text), int.Parse(numericUpDownUnder16.Text), gia, DateTime.Parse(DTP_ngaydi.Text), DateTime.Now, listBox_paytype.Text);
                 //đặt tour
                 if (BookTicket(tk))//thành  công
                 {
                     //hiển thị mã ve của hóa đơn
                     int k = taomavetudong() - 1;//do khi thêm vào stt sẽ tăng 1
                     string mave = k.ToString();
-                    MessageBox.Show("Đặt vé thành công. Mã vé của bạn là:", "Thông Báo");
-                    MessageBox.Show(mave, "Thông Báo");
+                    MessageBox.Show("Đặt vé thành công. Mã vé của bạn là nội dung chuyển khoản. Vui lòng chuyển khoản đến STK 123 của ngân hàng ABC theo đúng nội dung.", "Thông Báo");
+                    TB_PAYTEXT.Text = mave;
                     return;
                 }
                 else//thất bại
@@ -170,7 +170,6 @@ namespace Quản_lý_công_ty_du_lịch
                     MessageBox.Show("Đặt vé thất Bại", "Thông Báo");
                     return;
                 }
-
 
             }
         }

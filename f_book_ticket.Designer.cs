@@ -38,13 +38,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.BT_LOAD_TOUR = new System.Windows.Forms.Button();
-            this.TB_ID_TOUR_SEARCH = new System.Windows.Forms.TextBox();
+            this.TB_ID_TOUR_LOAD = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.listBox_paytype = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.BUTTON_BOOK_TICKET = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@
             this.DTP_ngaydi = new System.Windows.Forms.DateTimePicker();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
+            this.TB_PAYTEXT = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DTGV_TOUR)).BeginInit();
             this.panel4.SuspendLayout();
@@ -66,7 +66,6 @@
             this.panel10.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -148,7 +147,7 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.BT_LOAD_TOUR);
-            this.panel10.Controls.Add(this.TB_ID_TOUR_SEARCH);
+            this.panel10.Controls.Add(this.TB_ID_TOUR_LOAD);
             this.panel10.Controls.Add(this.label14);
             this.panel10.Location = new System.Drawing.Point(12, 12);
             this.panel10.Name = "panel10";
@@ -166,13 +165,13 @@
             this.BT_LOAD_TOUR.UseVisualStyleBackColor = true;
             this.BT_LOAD_TOUR.Click += new System.EventHandler(this.button_load_tour_Click);
             // 
-            // TB_ID_TOUR_SEARCH
+            // TB_ID_TOUR_LOAD
             // 
-            this.TB_ID_TOUR_SEARCH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_ID_TOUR_SEARCH.Location = new System.Drawing.Point(101, 33);
-            this.TB_ID_TOUR_SEARCH.Name = "TB_ID_TOUR_SEARCH";
-            this.TB_ID_TOUR_SEARCH.Size = new System.Drawing.Size(213, 27);
-            this.TB_ID_TOUR_SEARCH.TabIndex = 1;
+            this.TB_ID_TOUR_LOAD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_ID_TOUR_LOAD.Location = new System.Drawing.Point(101, 33);
+            this.TB_ID_TOUR_LOAD.Name = "TB_ID_TOUR_LOAD";
+            this.TB_ID_TOUR_LOAD.Size = new System.Drawing.Size(213, 27);
+            this.TB_ID_TOUR_LOAD.TabIndex = 1;
             // 
             // label14
             // 
@@ -219,22 +218,12 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.dataGridView1);
+            this.panel11.Controls.Add(this.TB_PAYTEXT);
             this.panel11.Controls.Add(this.label4);
             this.panel11.Location = new System.Drawing.Point(585, 257);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(403, 90);
             this.panel11.TabIndex = 7;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(5, 47);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(392, 32);
-            this.dataGridView1.TabIndex = 1;
             // 
             // label4
             // 
@@ -255,7 +244,7 @@
             this.BUTTON_BOOK_TICKET.TabIndex = 8;
             this.BUTTON_BOOK_TICKET.Text = "Đặt vé";
             this.BUTTON_BOOK_TICKET.UseVisualStyleBackColor = true;
-            this.BUTTON_BOOK_TICKET.Click += new System.EventHandler(this.button1_Click);
+            this.BUTTON_BOOK_TICKET.Click += new System.EventHandler(this.BT_BOOK_TICKET_Click);
             // 
             // button2
             // 
@@ -354,6 +343,14 @@
             this.label7.Text = "Ngày đi: ";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // TB_PAYTEXT
+            // 
+            this.TB_PAYTEXT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_PAYTEXT.Location = new System.Drawing.Point(8, 47);
+            this.TB_PAYTEXT.Name = "TB_PAYTEXT";
+            this.TB_PAYTEXT.Size = new System.Drawing.Size(369, 27);
+            this.TB_PAYTEXT.TabIndex = 2;
+            // 
             // f_book_ticket
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -386,7 +383,6 @@
             this.panel1.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -405,7 +401,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button BT_LOAD_TOUR;
-        private System.Windows.Forms.TextBox TB_ID_TOUR_SEARCH;
+        private System.Windows.Forms.TextBox TB_ID_TOUR_LOAD;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
@@ -426,6 +422,6 @@
         private System.Windows.Forms.DateTimePicker DTP_ngaydi;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox TB_PAYTEXT;
     }
 }

@@ -10,45 +10,55 @@ namespace Quản_lý_công_ty_du_lịch.DAO
 {
     public class DataProvider
     {
-        private static DataProvider instance;
+        private static DataProvider instance; // Ctrl + R + E
+
         public static DataProvider Instance
         {
-            get { if (instance == null) instance = new DataProvider(); return instance; }
+            get { if (instance == null) instance = new DataProvider(); return DataProvider.instance; }
             private set { DataProvider.instance = value; }
         }
-        public DataProvider() {}
+
+        public DataProvider() { }
+
         private string connectionSTR = "Data Source=HDzungx;Initial Catalog=QuanLyDuLich;Integrated Security=True";
 
         public DataSet ExecuteQuery(string query, object[] parameter = null)
         {
-            DataSet dataset = new DataSet();
-            using (SqlConnection connection= new SqlConnection(connectionSTR))
+            DataSet data = new DataSet();
+
+            using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
                 connection.Open();
-                SqlCommand cmd = new SqlCommand(query,connection);
+
+                SqlCommand command = new SqlCommand(query, connection);
+
                 if (parameter != null)
                 {
-                    int i = 0;
                     string[] listPara = query.Split(' ');
-                    foreach (string item in listPara) 
+                    int i = 0;
+                    foreach (string item in listPara)
                     {
                         if (item.Contains('@'))
                         {
-                            cmd.Parameters.AddWithValue(item, parameter[i]);
+                            command.Parameters.AddWithValue(item, parameter[i]);
                             i++;
                         }
                     }
                 }
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                adapter.Fill(dataset);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                adapter.Fill(data);
+
                 connection.Close();
-                return dataset;
             }
+
+            return data;
         }
 
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
-            int dataset = 0;
+            int data = 0;
 
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
@@ -70,16 +80,17 @@ namespace Quản_lý_công_ty_du_lịch.DAO
                     }
                 }
 
-                dataset = command.ExecuteNonQuery();
+                data = command.ExecuteNonQuery();
 
                 connection.Close();
             }
 
-            return dataset;
+            return data;
         }
+
         public object ExecuteScalar(string query, object[] parameter = null)
         {
-            object dataset = 0;
+            object data = 0;
 
             using (SqlConnection connection = new SqlConnection(connectionSTR))
             {
@@ -101,12 +112,12 @@ namespace Quản_lý_công_ty_du_lịch.DAO
                     }
                 }
 
-                dataset = command.ExecuteScalar();
+                data = command.ExecuteScalar();
 
                 connection.Close();
             }
 
-            return dataset;
+            return data;
         }
-}
+    }
 }
