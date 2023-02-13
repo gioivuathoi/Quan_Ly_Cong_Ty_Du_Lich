@@ -41,15 +41,7 @@ namespace Quản_lý_công_ty_du_lịch
             f_account_customer c = new f_account_customer();
             f_account_manager m = new f_account_manager();
             this.Hide();
-            if (2== 1)
-            { 
                 c.ShowDialog();
-            }    
-            else
-            {
-                m.ShowDialog();
-            }
-            
             this.Show();
         }
     }

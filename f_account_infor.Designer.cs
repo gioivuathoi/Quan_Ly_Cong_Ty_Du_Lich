@@ -32,16 +32,16 @@
             this.login_name = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TB_TenKH = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TB_NgaySinh = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TB_CCCD = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TB_Email = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -55,7 +55,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.TB_SDT = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -99,20 +99,20 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.TB_TenKH);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(12, 95);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(550, 65);
             this.panel1.TabIndex = 2;
             // 
-            // textBox1
+            // TB_TenKH
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(181, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(350, 34);
-            this.textBox1.TabIndex = 1;
+            this.TB_TenKH.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_TenKH.Location = new System.Drawing.Point(181, 13);
+            this.TB_TenKH.Name = "TB_TenKH";
+            this.TB_TenKH.Size = new System.Drawing.Size(350, 34);
+            this.TB_TenKH.TabIndex = 1;
             // 
             // label2
             // 
@@ -126,20 +126,21 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.TB_NgaySinh);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Location = new System.Drawing.Point(12, 166);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(550, 65);
             this.panel3.TabIndex = 3;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // textBox2
+            // TB_NgaySinh
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(181, 17);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(350, 34);
-            this.textBox2.TabIndex = 1;
+            this.TB_NgaySinh.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_NgaySinh.Location = new System.Drawing.Point(181, 17);
+            this.TB_NgaySinh.Name = "TB_NgaySinh";
+            this.TB_NgaySinh.Size = new System.Drawing.Size(350, 34);
+            this.TB_NgaySinh.TabIndex = 1;
             // 
             // label3
             // 
@@ -153,21 +154,21 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox3);
+            this.panel4.Controls.Add(this.TB_CCCD);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(12, 237);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(550, 65);
             this.panel4.TabIndex = 4;
             // 
-            // textBox3
+            // TB_CCCD
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(181, 13);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(350, 34);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.TB_CCCD.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_CCCD.Location = new System.Drawing.Point(181, 13);
+            this.TB_CCCD.Name = "TB_CCCD";
+            this.TB_CCCD.Size = new System.Drawing.Size(350, 34);
+            this.TB_CCCD.TabIndex = 1;
+            this.TB_CCCD.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -181,20 +182,20 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.TB_Email);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Location = new System.Drawing.Point(12, 308);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(550, 65);
             this.panel5.TabIndex = 5;
             // 
-            // textBox4
+            // TB_Email
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(181, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(350, 34);
-            this.textBox4.TabIndex = 1;
+            this.TB_Email.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_Email.Location = new System.Drawing.Point(181, 17);
+            this.TB_Email.Name = "TB_Email";
+            this.TB_Email.Size = new System.Drawing.Size(350, 34);
+            this.TB_Email.TabIndex = 1;
             // 
             // label5
             // 
@@ -312,20 +313,20 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.textBox7);
+            this.panel8.Controls.Add(this.TB_SDT);
             this.panel8.Controls.Add(this.label9);
             this.panel8.Location = new System.Drawing.Point(12, 379);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(550, 65);
             this.panel8.TabIndex = 13;
             // 
-            // textBox7
+            // TB_SDT
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(181, 17);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(350, 34);
-            this.textBox7.TabIndex = 1;
+            this.TB_SDT.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_SDT.Location = new System.Drawing.Point(181, 17);
+            this.TB_SDT.Name = "TB_SDT";
+            this.TB_SDT.Size = new System.Drawing.Size(350, 34);
+            this.TB_SDT.TabIndex = 1;
             // 
             // label9
             // 
@@ -386,16 +387,16 @@
         private System.Windows.Forms.TextBox login_name;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TB_TenKH;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TB_NgaySinh;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TB_CCCD;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TB_Email;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox5;
@@ -409,7 +410,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox TB_SDT;
         private System.Windows.Forms.Label label9;
     }
 }
