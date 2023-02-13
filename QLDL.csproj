@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="DAO\DAO_BookTicket.cs" />
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\DTO_Account.cs" />
     <Compile Include="DTO\DTO_BookTicket.cs" />
     <Compile Include="DTO\UpdateData.cs" />
     <Compile Include="f_book_ticket.cs">
