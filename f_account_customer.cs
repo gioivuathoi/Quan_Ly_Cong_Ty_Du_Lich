@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Quản_lý_công_ty_du_lịch.DAO;
+using Quản_lý_công_ty_du_lịch.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,8 +17,26 @@ namespace Quản_lý_công_ty_du_lịch
         public f_account_customer()
         {
             InitializeComponent();
+            LoadTour();
         }
-
+        List<Tour> SearchTour(string name)
+        {
+            List<Tour> ListTour = TourDAO.Instance.SearchTour(name);
+            return ListTour;
+        }
+        void SearchTour(DateTime startdate)
+        {
+            string query = "exec timkiemtourchoban @startdate ";
+            DataSet data1 = DAO.DataProvider.Instance.ExecuteQuery(query, new object[] { startdate.ToString()});
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView2.DataSource = data1.Tables[0];
+        }
+        void LoadTour()
+        {
+            List<Tour> Tour = TourDAO.Instance.GetListTour;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.DataSource = TourDAO.Instance.GetListTour();
+        }
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -26,17 +46,26 @@ namespace Quản_lý_công_ty_du_lịch
         {
 
         }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void f_account_customer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Khách hàng vui lòng liên hệ số điện thoại 0123456789 để được hỗ trợ !", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
 
+            }
+        }
         private void label4_Click(object sender, EventArgs e)
         {
 

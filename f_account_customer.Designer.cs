@@ -30,13 +30,10 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.looking_for_tour = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.kháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,25 +50,27 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.dataGridView2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.looking_for_tour);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(19, 57);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(522, 432);
@@ -80,51 +79,26 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(233, 307);
+            this.button1.Location = new System.Drawing.Point(236, 200);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(256, 61);
+            this.button1.Size = new System.Drawing.Size(256, 45);
             this.button1.TabIndex = 9;
             this.button1.Text = "Tìm Kiếm";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Hà Nội",
-            "Ninh Bình",
-            "Hải Phòng",
-            "Hồ Chí Minh"});
-            this.comboBox1.Location = new System.Drawing.Point(219, 240);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(270, 39);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 174);
+            this.dateTimePicker1.Location = new System.Drawing.Point(172, 151);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(320, 34);
             this.dateTimePicker1.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(14, 242);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 32);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Khơi hành từ:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 174);
+            this.label2.Location = new System.Drawing.Point(17, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(149, 32);
             this.label2.TabIndex = 3;
@@ -150,16 +124,6 @@
             this.looking_for_tour.TabIndex = 1;
             this.looking_for_tour.Text = "Tìm kiếm Tour du lịch";
             this.looking_for_tour.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 112);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(469, 39);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.UseWaitCursor = true;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // menuStrip1
             // 
@@ -196,20 +160,20 @@
             // hồSơCáNhânToolStripMenuItem
             // 
             this.hồSơCáNhânToolStripMenuItem.Name = "hồSơCáNhânToolStripMenuItem";
-            this.hồSơCáNhânToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.hồSơCáNhânToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.hồSơCáNhânToolStripMenuItem.Text = "Hồ sơ cá nhân";
             this.hồSơCáNhânToolStripMenuItem.Click += new System.EventHandler(this.hồSơCáNhânToolStripMenuItem_Click);
             // 
             // thôngTinVéĐặtToolStripMenuItem
             // 
             this.thôngTinVéĐặtToolStripMenuItem.Name = "thôngTinVéĐặtToolStripMenuItem";
-            this.thôngTinVéĐặtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thôngTinVéĐặtToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.thôngTinVéĐặtToolStripMenuItem.Text = "Thông tin vé đặt";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(200, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
@@ -226,20 +190,20 @@
             // đặtVéToolStripMenuItem
             // 
             this.đặtVéToolStripMenuItem.Name = "đặtVéToolStripMenuItem";
-            this.đặtVéToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đặtVéToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.đặtVéToolStripMenuItem.Text = "Đặt vé";
             this.đặtVéToolStripMenuItem.Click += new System.EventHandler(this.đặtVéToolStripMenuItem_Click);
             // 
             // hủyVéToolStripMenuItem
             // 
             this.hủyVéToolStripMenuItem.Name = "hủyVéToolStripMenuItem";
-            this.hủyVéToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.hủyVéToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.hủyVéToolStripMenuItem.Text = "Hủy vé";
             // 
             // khiếuNạiToolStripMenuItem
             // 
             this.khiếuNạiToolStripMenuItem.Name = "khiếuNạiToolStripMenuItem";
-            this.khiếuNạiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.khiếuNạiToolStripMenuItem.Size = new System.Drawing.Size(153, 26);
             this.khiếuNạiToolStripMenuItem.Text = "Khiếu nại";
             // 
             // cẩmNangDuLịchToolStripMenuItem
@@ -298,6 +262,16 @@
             this.panel3.Size = new System.Drawing.Size(330, 636);
             this.panel3.TabIndex = 3;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 51);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(306, 573);
+            this.dataGridView1.TabIndex = 1;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -308,15 +282,23 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Các tour thịnh hành:";
             // 
-            // dataGridView1
+            // dataGridView2
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 51);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(306, 573);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(20, 251);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(469, 181);
+            this.dataGridView2.TabIndex = 10;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(23, 112);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(466, 25);
+            this.comboBox1.TabIndex = 11;
             // 
             // f_account_customer
             // 
@@ -340,6 +322,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -358,13 +341,10 @@
         private System.Windows.Forms.ToolStripMenuItem đặtVéToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hủyVéToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem khiếuNạiToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label looking_for_tour;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem cẩmNangDuLịchToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
@@ -374,5 +354,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -14,3 +14,16 @@ F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_
 F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_infor.resources
 F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_admin.resources
 F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_book_ticket.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản lý công ty du lịch.csproj.AssemblyReference.cache
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản lý công ty du lịch.csproj.SuggestedBindingRedirects.cache
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản_lý_công_ty_du_lịch.f_book_ticket.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản_lý_công_ty_du_lịch.f_admin.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_infor.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_customer.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_manager.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản_lý_công_ty_du_lịch.f_login.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản_lý_công_ty_du_lịch.Properties.Resources.resources
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản lý công ty du lịch.csproj.GenerateResource.cache
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản lý công ty du lịch.csproj.CoreCompileInputs.cache
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản lý công ty du lịch.exe
+C:\Users\TLUU\Downloads\Quan_Ly_Cong_Ty_Du_Lich-master\obj\Debug\Quản lý công ty du lịch.pdb

@@ -47,7 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TourDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Tour.cs" />
     <Compile Include="DTO\UpdateData.cs" />
     <Compile Include="f_book_ticket.cs">
       <SubType>Form</SubType>
