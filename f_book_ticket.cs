@@ -76,10 +76,10 @@ namespace Quản_lý_công_ty_du_lịch
 
                 int gia = int.Parse(numericUpDownOver16.Text) * int.Parse(DTGV_TOUR.Rows[1].Cells[2].ToString());
                 DTO_BookTicket tk = new DTO_BookTicket(DAO.DAO_BookTicket.Instance.taomavetudong().ToString(), int.Parse(numericUpDownOver16.Text), int.Parse(numericUpDownUnder16.Text), gia, DateTime.Parse(DTP_ngaydi.Text), DateTime.Now, listBox_paytype.Text);
-                //đặt tour
+                //đặt ve
                 if (DAO.DAO_BookTicket.Instance.BookTicket(tk))//thành  công
                 {
-                    //hiển thị mã ve của hóa đơn
+                    //hiển thị mã ve
                     int k = DAO.DAO_BookTicket.Instance.taomavetudong() - 1;//do khi thêm vào stt sẽ tăng 1
                     string mave = k.ToString();
                     MessageBox.Show("Đặt vé thành công. Mã vé của bạn là nội dung chuyển khoản. Vui lòng chuyển khoản đến STK 123 của ngân hàng ABC theo đúng nội dung.", "Thông Báo");
@@ -94,6 +94,14 @@ namespace Quản_lý_công_ty_du_lịch
 
             }
         }
+        private void BT_CANCEL_TICKET_Click(object sender, EventArgs e)
+        {
+            DAO.DAO_BookTicket.Instance.CancelTicket(TB_CancelID.ToString());
+            MessageBox.Show("Vé đã được xoá thành công.", "Thông Báo");
+            return;
+        }    
+
+
         #endregion
         private void label5_Click(object sender, EventArgs e)
         {

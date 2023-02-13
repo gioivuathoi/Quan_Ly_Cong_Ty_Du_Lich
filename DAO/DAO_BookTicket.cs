@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Quản_lý_công_ty_du_lịch.DAO
 {
@@ -90,6 +91,13 @@ namespace Quản_lý_công_ty_du_lịch.DAO
             {
                 return false;//thất bại
             }
+        }
+        public bool CancelTicket(string mave)
+        {
+            string query = string.Format("Delete Ticket where ma_ve = N'{0}'", mave);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
     }
 }

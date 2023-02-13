@@ -49,10 +49,10 @@
             this.BUTTON_BOOK_TICKET = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BT_CANCEL_TICKET = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TB_CancelID = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.DTP_ngaydi = new System.Windows.Forms.DateTimePicker();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -267,7 +267,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.BT_CANCEL_TICKET);
             this.panel5.Controls.Add(this.label6);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Location = new System.Drawing.Point(582, 458);
@@ -275,15 +275,16 @@
             this.panel5.Size = new System.Drawing.Size(432, 186);
             this.panel5.TabIndex = 10;
             // 
-            // button3
+            // BT_CANCEL_TICKET
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(99, 121);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(226, 53);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Hủy vé";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BT_CANCEL_TICKET.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BT_CANCEL_TICKET.Location = new System.Drawing.Point(99, 121);
+            this.BT_CANCEL_TICKET.Name = "BT_CANCEL_TICKET";
+            this.BT_CANCEL_TICKET.Size = new System.Drawing.Size(226, 53);
+            this.BT_CANCEL_TICKET.TabIndex = 8;
+            this.BT_CANCEL_TICKET.Text = "Hủy vé";
+            this.BT_CANCEL_TICKET.UseVisualStyleBackColor = true;
+            this.BT_CANCEL_TICKET.Click += new System.EventHandler(this.BT_CANCEL_TICKET_Click);
             // 
             // label6
             // 
@@ -297,20 +298,20 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.TB_CancelID);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Location = new System.Drawing.Point(11, 51);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(407, 44);
             this.panel6.TabIndex = 6;
             // 
-            // textBox1
+            // TB_CancelID
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(155, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 27);
-            this.textBox1.TabIndex = 1;
+            this.TB_CancelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_CancelID.Location = new System.Drawing.Point(155, 10);
+            this.TB_CancelID.Name = "TB_CancelID";
+            this.TB_CancelID.Size = new System.Drawing.Size(240, 27);
+            this.TB_CancelID.TabIndex = 1;
             // 
             // label5
             // 
@@ -414,9 +415,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TB_CancelID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BT_CANCEL_TICKET;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView DTGV_TOUR;
         private System.Windows.Forms.DateTimePicker DTP_ngaydi;
