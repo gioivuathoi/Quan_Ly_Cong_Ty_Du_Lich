@@ -42,6 +42,29 @@ namespace Quản_lý_công_ty_du_lịch
 
         }
 
+        #region methods
+        void LoadTicket(string id_tour)
+        {
+            string query = "exec TimKiemCongTyVanTai @ma_tour";
+            DataSet data = DAO.DataProvider.Instance.ExecuteQuery(query, new object[] { id_tour });
+            if (data.Tables[0].Rows.Count == 0)
+            {
+                MessageBox.Show("Mã Tour không tồn tại!", "Thông báo");
+            }
+            else
+            {
+                DTGV_TICKET.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                DTGV_TICKET.DataSource = data.Tables[0];
+            }
+        }
+        #endregion
+        #region events
+        private void button_find_ticket_Click(object sender, EventArgs e)
+        {
+            string id_tour = TB_ID_TOUR_SEARCH.Text;
+            LoadTicket(id_tour);
+        }
+        #endregion
         private void label5_Click(object sender, EventArgs e)
         {
 

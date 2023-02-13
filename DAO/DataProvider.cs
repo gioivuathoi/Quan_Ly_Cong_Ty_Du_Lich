@@ -17,7 +17,7 @@ namespace Quản_lý_công_ty_du_lịch.DAO
             private set { DataProvider.instance = value; }
         }
         private DataProvider() {}
-        private string connectionSTR = "Data Source=DESKTOP-SRVEET5\\XUANTHINH;Initial Catalog=CongTyDuLich;Integrated Security=True";
+        private string connectionSTR = "Data Source=HDzungx;Initial Catalog=QuanLyDuLich;Integrated Security=True";
 
         public DataSet ExecuteQuery(string query, object[] parameter = null)
         {
