@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -229,6 +231,32 @@ namespace Quản_lý_công_ty_du_lịch
                 dataGridView7.DataSource = data.Tables[0];
             }
         }
+        void CreateTrans(string id_trans, string name, string phone_num, string email)
+        {
+            string query = "exec TaoVanTai @id , @ten , @sdt , @email";
+            int data = DTO.UpdateData.Instance.ExecuteUpdate(query,new object[] {id_trans, name, phone_num, email});
+            if (data != 1)
+            {
+                MessageBox.Show("ID công ty vận tải đã tồn tại!", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Tạo tài khoản Công ty vận tải mới thành công!", "Thông báo");
+            }    
+        }
+        void CreateHotel(string id_hotel, string name, string phone_num, string email, string address)
+        {
+            string query = "exec TaoKhachSan @id , @ten , @sdt , @email , @dia_chi";
+            int data = DTO.UpdateData.Instance.ExecuteUpdate(query, new object[] {id_hotel, name, phone_num, email, address});
+            if (data != 1)
+            {
+                MessageBox.Show("ID khách sạn đã tồn tại!", "Thông báo");
+            }
+            else
+            {
+                MessageBox.Show("Tạo tài khoản Khách sạn thành công!", "Thông báo");
+            }    
+        }    
         #endregion
         #region events
         private void Button_thongkeve_Click(object sender, EventArgs e)
@@ -272,7 +300,14 @@ namespace Quản_lý_công_ty_du_lịch
             string citizen_id = TB_id_citizen_staff.Text;
             DateTime dob = DTP_dob_staff.Value;
             string email = TB_email_staff.Text;
-            CreateAccount(username,password,name,phone_number,role,citizen_id,dob,bank_number,email);
+            if (username == "" || password == "" || name == ""|| phone_number == "" || role == "" || bank_number == "" || citizen_id == "")
+            {
+                MessageBox.Show("Ngoài ngày sinh và email, các ô khác cần đủ thông tin!", "Thông báo");
+            }
+            else
+            {
+                CreateAccount(username, password, name, phone_number, role, citizen_id, dob, bank_number, email);
+            }    
         }
         private void button_cre_acc_cus_Click(object sender, EventArgs e)
         {
@@ -283,9 +318,18 @@ namespace Quản_lý_công_ty_du_lịch
             string bank_number = TB_bank_num_staff.Text;
             string citizen_id = TB_id_citizen_staff.Text;
             string role = "Customer";
+            
             DateTime dob = DTP_dob_staff.Value;
             string email = TB_email_staff.Text;
-            CreateAccount(username, password, name, phone_number,role, citizen_id, dob, bank_number, email,0);
+            if (username == "" || password == "" || name == "" || phone_number == "" || bank_number == "" || citizen_id == "")
+            {
+                MessageBox.Show("Các ô cần đầy đủ thông tin!", "Thông báo");
+            }
+            else
+            {
+                CreateAccount(username, password, name, phone_number, role, citizen_id, dob, bank_number, email, 0);
+            }    
+            
         }
         private void button_timkiem_tour_Click(object sender, EventArgs e)
         {
@@ -301,12 +345,22 @@ namespace Quản_lý_công_ty_du_lịch
         {
             string tour_id = TB_cre_tour_id.Text;
             string tour_name = TB_cre_tour_name.Text;
-            int tour_price = int.Parse(TB_cre_tour_price.Text);
-            int tour_type = int.Parse(TB_cre_tour_type.Text);
+            int tour_price = -1;
+            tour_price = int.Parse(TB_cre_tour_price.Text);
+            int tour_type = -1;
+            tour_type = int.Parse(TB_cre_tour_type.Text);
             string id_trans = TB_cre_tour_trans_id.Text;
             string id_hotel = TB_cre_tour_hotel_id.Text;
             string tour_process = TB_cre_tour_process.Text;
-            CreateTour(tour_id,tour_name,tour_price,tour_type,id_trans,id_hotel,tour_process);
+            if (tour_id == "" || tour_name == "" || tour_price == -1|| tour_type == -1|| tour_process == "")
+            {
+                MessageBox.Show("Ngoài Mã công ti vận tải, Mã Khách sạn thì các ô khác cần đầy đủ thông tin!", "Thông báo");
+            }
+            else
+            {
+                CreateTour(tour_id, tour_name, tour_price, tour_type, id_trans, id_hotel, tour_process);
+            }    
+            
         }
         private void button_find_trans_Click(object sender, EventArgs e)
         {
@@ -317,6 +371,38 @@ namespace Quản_lý_công_ty_du_lịch
         {
             string id_hotel = TB_find_id_hotel.Text;
             LoadHotel(id_hotel);
+        }
+        private void Add_trans_Click(object sender, EventArgs e)
+        {
+            string id_trans = TB_cre_id_trans.Text;
+            string name = TB_cre_name_trans.Text;
+            string phone_num = TB_cre_phone_num_trans.Text;
+            string email = TB_cre_email_trans.Text;
+            if (id_trans == "" || name == "" || phone_num == "")
+            {
+                MessageBox.Show("Ngoài Email thì cần điền đầy đủ thông tin!", "Thông báo");
+            }
+            else
+            {
+                CreateTrans(id_trans, name, phone_num, email);
+            }    
+            
+        }
+        private void Add_hotel_Click(object sender, EventArgs e)
+        {
+            string id_hotel = TB_cre_id_hotel.Text;
+            string name = TB_cre_name_hotel.Text;
+            string phone_num = TB_cre_phone_num_hotel.Text;
+            string email = TB_cre_email_hotel.Text;
+            string address = TB_cre_address_hotel.Text;
+            if (id_hotel == "" || name == "" || phone_num == "" || address == "")
+            {
+                MessageBox.Show("Ngoài Email thì cần điền đầy đủ thông tin!", "Thông báo");
+            }    
+            else
+            {
+                CreateHotel(id_hotel,name, phone_num,email, address);
+            }    
         }
         #endregion
 
