@@ -1,0 +1,33 @@
+D:\PRJKTPM\obj\Debug\QLDL.csproj.AssemblyReference.cache
+D:\PRJKTPM\obj\Debug\QLDL.csproj.SuggestedBindingRedirects.cache
+D:\PRJKTPM\obj\Debug\Quản_lý_công_ty_du_lịch.f_book_ticket.resources
+D:\PRJKTPM\obj\Debug\Quản_lý_công_ty_du_lịch.f_admin.resources
+D:\PRJKTPM\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_infor.resources
+D:\PRJKTPM\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_customer.resources
+D:\PRJKTPM\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_manager.resources
+D:\PRJKTPM\obj\Debug\Quản_lý_công_ty_du_lịch.f_login.resources
+D:\PRJKTPM\obj\Debug\Quản_lý_công_ty_du_lịch.Properties.Resources.resources
+D:\PRJKTPM\obj\Debug\QLDL.csproj.GenerateResource.cache
+D:\PRJKTPM\obj\Debug\QLDL.csproj.CoreCompileInputs.cache
+D:\PRJKTPM\obj\Debug\Quản lý công ty du lịch.exe
+D:\PRJKTPM\obj\Debug\Quản lý công ty du lịch.pdb
+D:\PRJKTPM\bin\Debug\Quản lý công ty du lịch.exe.config
+D:\PRJKTPM\bin\Debug\Quản lý công ty du lịch.exe
+D:\PRJKTPM\bin\Debug\Quản lý công ty du lịch.pdb
+F:\Visual Studio\Quản lý công ty du lịch\bin\Debug\Quản lý công ty du lịch.exe.config
+F:\Visual Studio\Quản lý công ty du lịch\bin\Debug\Quản lý công ty du lịch.exe
+F:\Visual Studio\Quản lý công ty du lịch\bin\Debug\Quản lý công ty du lịch.pdb
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\QLDL.csproj.AssemblyReference.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\QLDL.csproj.SuggestedBindingRedirects.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_book_ticket.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_admin.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_infor.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_customer.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_account_manager.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.f_login.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.Properties.Resources.resources
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\QLDL.csproj.GenerateResource.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\QLDL.csproj.CoreCompileInputs.cache
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.exe
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản lý công ty du lịch.pdb
+F:\Visual Studio\Quản lý công ty du lịch\obj\Debug\Quản_lý_công_ty_du_lịch.Register.resources

@@ -15,8 +15,25 @@ namespace Quản_lý_công_ty_du_lịch
         public f_account_customer()
         {
             InitializeComponent();
+            load_tour();
+        }
+        #region methods
+        void load_tour()
+        {
+            string query = "exec ListTour";
+            DataSet data = DAO.DataProvider.Instance.ExecuteQuery(query);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView1.DataSource = data.Tables[0];
+        }
+        void search_tour_by_name(string name_tour)
+        {
+            string query = "exec TimTourBangTen @ten_tour";
+            DataSet data = DAO.DataProvider.Instance.ExecuteQuery(query, new object[] {name_tour});
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridView2.DataSource = data.Tables[0];
         }
 
+        #endregion
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
@@ -26,7 +43,15 @@ namespace Quản_lý_công_ty_du_lịch
         {
 
         }
+        private void f_account_customer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Khách hàng vui lòng liên hệ số điện thoại 0123456789 để được hỗ trợ !", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
 
+            }
+        }
+        #region events
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -69,6 +94,35 @@ namespace Quản_lý_công_ty_du_lịch
             this.Hide();
             f.ShowDialog();
             this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string name_tour = TB_search_tour.Text;
+            search_tour_by_name(name_tour);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_get_mess_infor_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Hãy nhắn tin với chúng tôi vào hotline: 0991122 rằng bạn cần tư vấn \n" +
+                "Và chúng tôi sẽ gọi điện lại cho ban trong thời gian sớm nhất", "Thông báo");
+
+        }
+
+        private void button_get_phone_num_infor_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nếu bạn cần gọi điện trực tiếp, hãy gọi vào hotline: 0991122\nXin cảm ơn!", "Thông báo");
+        }
+        #endregion
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

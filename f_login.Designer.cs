@@ -86,6 +86,7 @@
             this.register_click.TabIndex = 4;
             this.register_click.Text = "Đăng ký";
             this.register_click.UseVisualStyleBackColor = true;
+            this.register_click.Click += new System.EventHandler(this.register_click_Click_1);
             // 
             // panel3
             // 

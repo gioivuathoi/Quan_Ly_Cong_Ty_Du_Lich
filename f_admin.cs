@@ -71,8 +71,8 @@ namespace Quản_lý_công_ty_du_lịch
         }
         void LoadAccountCustormer(string id_cus)
         {
-            string query = "exec TimKiemTaiKhoanKhachHang @id";
-            DataSet data = DAO.DataProvider.Instance.ExecuteQuery(query, new object[] { id_cus });
+            string query = "exec TimKiemTaiKhoanKhachHang @id , @sdt";
+            DataSet data = DAO.DataProvider.Instance.ExecuteQuery(query, new object[] { id_cus, id_cus});
             if (data.Tables[0].Rows.Count == 0 || data.Tables[1].Rows.Count == 0)
             {
                 MessageBox.Show("Không tìm thấy ID!", "Thông Báo!");
