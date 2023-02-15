@@ -20,14 +20,32 @@ namespace Quản_lý_công_ty_du_lịch
 
         public void loadTTCaNhan_KH()
         {
-            string query = "exec ThongTinKH @id";
+            string query = "";
+            if (f_login.instance.role == "staff" || f_login.instance.role == "admin")
+            {
+                query = "exec ThongTinNV @id ";
+            }
+            else
+            {
+                query = "exec ThongTinKH @id";
+            }
+            
             string id = f_login.instance.ID;
-            DataSet data = DAO.DataProvider.Instance.ExecuteQuery(query, new object[] { id });
-            TB_TenKH.Text = data.Tables[0].Columns[1].ToString();
-            TB_NgaySinh.Text = data.Tables[0].Columns[2].ToString();
-            TB_CCCD.Text = data.Tables[0].Columns[3].ToString();
-            TB_Email.Text = data.Tables[0].Columns[4].ToString();
-            TB_SDT.Text = data.Tables[0].Columns[5].ToString();
+            
+            DataSet data = DAO.DataProvider.Instance.ExecuteQuery(query,new object[] {id});
+            if (data.Tables[0].Rows.Count > 0)
+            {
+                login_name.Text = data.Tables[0].Rows[0].ItemArray[0].ToString();
+                TB_TenKH.Text = data.Tables[0].Rows[0].ItemArray[1].ToString();
+                TB_NgaySinh.Text = data.Tables[0].Rows[0].ItemArray[2].ToString();
+                TB_CCCD.Text = data.Tables[0].Rows[0].ItemArray[3].ToString();
+                TB_Email.Text = data.Tables[0].Rows[0].ItemArray[5].ToString();
+                TB_SDT.Text = data.Tables[0].Rows[0].ItemArray[4].ToString();
+            }
+            else
+            {
+
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
